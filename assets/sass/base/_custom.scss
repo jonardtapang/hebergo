@@ -1,0 +1,360 @@
+html, body {
+	height: 100%;
+}
+
+body{
+	font-family: Myriad Pro;
+}
+
+img.home-logo{
+	-webkit-transition: opacity 1.5s ease-out, -webkit-transform 0.8s ease-in;
+}
+
+img.home-logo-original{
+	position: absolute;
+	top: 50%;
+	margin-left: -239px;
+	margin-top: -83px;
+	-webkit-animation-name: spinner;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 4s;
+	animation-name: spinner;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+/* WebKit and Opera browsers */
+@-webkit-keyframes spinner {
+	from
+	{
+		opacity: 0;
+		-webkit-transform: rotateY(0deg);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: rotateY(-360deg);
+	}
+}
+
+/* all other browsers */
+@keyframes spinner {
+	from {
+		-moz-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+	}
+	to
+	{
+		-moz-transform: rotateY(-360deg);
+		-ms-transform: rotateY(-360deg);
+		transform: rotateY(-360deg);
+
+	}
+}
+
+img.home-logo:hover{
+
+	/* This timing applies on the way OUT */
+	transition-timing-function: ease-in-out;
+
+	/* Quick on the way out */
+	transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+
+	/* Hide thing by pushing it outside by default */
+	-moz-transform: rotate(720deg);
+	-webkit-transform: rotate(720deg);
+	-o-transform: rotate(720deg);
+	-ms-transform: rotate(720deg);
+	transform: rotate(720deg);
+	opacity: 0;
+}
+
+a{
+	color: #fff;
+	text-decoration: none !important;
+	cursor: pointer;
+}
+
+.textBotCenter{
+	color: #fff;
+	display: table-cell;
+	text-align: center;
+	vertical-align: bottom;
+	padding-bottom: 10%;
+}
+
+.height100{
+	height: 100%;
+}
+
+.centerLine{
+	height: 100%;
+	position: absolute;
+	width: 5px;
+	background-color: #fff;
+	margin-left: 50%;
+	z-index: 1;
+
+}
+
+.centerLine img.home-logo{
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	margin-left: -90px;
+	margin-top: -108px;
+}
+
+
+
+.left-container{
+	background-color: #2f3293;
+	height: 100%;
+	display: table;
+}
+
+.right-container{
+	background-color: #f6821f;
+	height: 100%;
+	display: table;
+}
+
+.branding{
+	top: -24px;
+	left: -19px;
+	position: absolute;
+	z-index: 1;
+}
+
+.branding img{
+	width: 143px;
+	height: auto;
+}
+
+.custom-nav{
+	background-color: #f58220;
+	border-radius: 0;
+	margin-top: 5px;
+	border-color: transparent;
+	min-height: 35px;
+	margin-left: 67px;	//only for web view
+}
+
+.dropdown-menu {
+	-webkit-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+	transform: rotateX(90deg);
+	transform-origin: top;
+	opacity: 0;
+	display: block;
+}
+.open .dropdown-menu {
+	opacity: 1;
+	transform: rotateX(0deg);
+	transform-origin: top;
+}
+.upper-header{
+	position: relative;
+	background-color: #2f3192;
+	height: 110px;
+}
+
+.upper-header .page-header-text{
+	text-align: right;
+	margin: 0;
+	line-height: 110px;
+	color: #fff;
+	font-size: 40px;
+	margin-right: 30px;
+}
+
+/** Bootstrap Customization **/
+
+.navbar-default .navbar-nav>li>a{
+	color: #fff;
+	font-family: Myriad Pro;
+	font-weight: bold;
+	font-size: 18px;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 35px;
+}
+
+/** /.Bootstrap Customization **/
+
+
+#footer{
+	background-color: #d6d5d6;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+#footer	p.credit{
+	text-align: center;
+	margin: 10px auto;
+}
+
+//Last Web View
+@media (max-width: 768px){
+
+	.branding {
+		top: -14px;
+		img{
+			width: 105px;
+		}
+	}
+
+	.upper-header {
+		height: 80px;
+
+		.page-header-text{
+			line-height: 85px;
+			font-size: 30px;
+		}
+	}
+
+	.navbar-default .navbar-nav>li>a{
+		font-size: 14px;
+	}
+
+	.custom-nav{
+		margin-left: 50px
+	}
+
+}
+
+//Start of Mobile View
+@media (max-width: 767px){
+	.navbar-default .navbar-nav>.open>a,
+	.navbar-default .navbar-nav>.open>a:focus,
+	.navbar-default .navbar-nav>.open>a:hover {
+		color: #fff;
+		background-color: #2f3192;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+		color: #fff;
+	}
+	.nav>li {
+		border-bottom: 1px solid #e69f63;
+	}
+
+	nav li:last-child {
+		border-bottom: none;
+	}
+
+	.custom-nav {
+		margin-left: 0;
+		nav{
+			li{
+				border-bottom: 1px solid #fff;
+			}
+		}
+	}
+
+	.navbar-default {
+		.navbar-toggle{
+			&:hover, &:focus{
+					background-color: #2f3192;
+			}
+			border-color: #fff;
+			.icon-bar{
+				background-color: #fff;
+			}
+		}
+	}
+
+	.navbar-toggle {
+		padding: 5px 6px;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+
+}
+
+@media (max-width: 600px){
+	.col-xs-6.left-container, .col-xs-6.right-container {
+		width: 100%;
+		height: 50%;
+		float: none;
+	}
+
+	.centerLine {
+		position: relative;
+		width: 100%;
+		height: 5px;
+		margin-left: 0;
+
+		img.home-logo{
+			width: 100px;
+			height: auto;
+			left: 50%;
+			margin-left: -50px;
+			margin-top: -55px;
+		}
+	}
+
+	.textBotCenter {
+		vertical-align: middle;
+		padding-bottom: 0;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 500px){
+	.upper-header{
+		.page-header-text {
+			line-height: 85px;
+			font-size: 20px;
+		}
+	}
+}
+
+//Smaller Mobile View
+@media (max-width: 375px){
+	.custom-nav{
+		margin-top: 2px;
+		min-height: 30px;
+	}
+
+	.branding{
+		img {
+			width: 70px;
+		}
+	}
+
+	.upper-header {
+		height: 50px;
+	}
+
+	.upper-header{
+		.page-header-text {
+			line-height: 55px;
+			font-size: 20px;
+			margin-right: 20px;
+		}
+	}
+
+	.navbar-toggle {
+		padding: 3px 4px;
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+
+	.navbar-default .navbar-nav > li > a {
+		font-size: 12px;
+		line-height: 25px;
+	}
+
+	.dropdown-menu {
+		padding: 0;
+		font-size: 12px;
+	}
+
+}
