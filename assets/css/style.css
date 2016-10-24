@@ -117,7 +117,7 @@ a {
   display: table-cell;
   text-align: center;
   vertical-align: bottom;
-  padding-bottom: 10%; }
+  padding-bottom: 25%; }
 
 .height100 {
   height: 100%; }
@@ -180,8 +180,30 @@ a {
 
 .upper-header {
   position: relative;
-  background-color: #2f3192;
   height: 110px; }
+
+.backgroundBlue {
+  background-color: #2f3192; }
+
+.backgroundOrange {
+  background-color: #f58220; }
+
+.backgroundBlue.navbar-default .navbar-nav > li > a:focus, .backgroundBlue.navbar-default .navbar-nav > li > a:hover {
+  color: #f58220; }
+
+.backgroundOrange.navbar-default .navbar-nav > li > a:focus, .backgroundOrange.navbar-default .navbar-nav > li > a:hover {
+  color: #2f3192; }
+
+.backgroundBlue.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .backgroundBlue.navbar-default .navbar-nav > .open > a:hover {
+  color: #f58220;
+  background-color: #ffffff; }
+
+.backgroundOrange.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .backgroundOrange.navbar-default .navbar-nav > .open > a:hover {
+  color: #2f3192;
+  background-color: #ffffff; }
+
+.navbar-right .dropdown-menu {
+  left: 0; }
 
 .upper-header .page-header-text {
   text-align: right;
@@ -206,7 +228,8 @@ a {
   background-color: #d6d5d6;
   position: fixed;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
 
 #footer p.credit {
   text-align: center;
@@ -278,6 +301,11 @@ a {
       left: 50%;
       margin-left: -50px;
       margin-top: -55px; }
+    .centerLine img.home-logo-original {
+      left: 50%;
+      width: 50%;
+      margin-left: -25%;
+      margin-top: -9%; }
 
   .textBotCenter {
     vertical-align: middle;
